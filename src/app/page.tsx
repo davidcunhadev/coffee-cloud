@@ -1,8 +1,12 @@
+import Home from "@/components/Home";
+import React from "react";
 
-export default function Home() {
+function HomePage() {
 	return (
-		<main className="">
-			<h1 className="">hi</h1>
+		<main>
+			<Home />
 		</main>
 	);
 }
+
+export default HomePage;
