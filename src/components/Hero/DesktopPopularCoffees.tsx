@@ -91,21 +91,18 @@ function DesktopPopularCoffees() {
 		<div className="h-full bg-coffeeVariant1 bg-opacity-40 rounded-2xl p-4">
 			<h1 className="text-coffeeVariant3 font-bold text-xl text-center pb-4">Popular <span className="border-b-2 border-coffeeVariant3">Now</span>
 			</h1>
-			<div className="">
-				<div className="flex justify-evenly">
-					{getThreeCoffees.map((item) => (
-						<div key={item.id}>
-							<CoffeeCard
-								name={item.name}
-								method={item.method}
-								intensity={item.intensity}
-								allVotes={item.allVotes}
-								rate={item.rate}
-								image={item.image}
-							/>
-						</div>
-					))}
-				</div>
+			<div className="flex justify-evenly">
+				{getThreeCoffees.map((item) => (
+					<div key={item.id}>
+						<CoffeeCard
+							name={item.name}
+							method={item.method}
+							intensity={item.intensity}
+							allVotes={item.allVotes}
+							rate={item.rate}
+							image={item.image}/>
+					</div>
+				))}
 			</div>
 		</div>
 	);

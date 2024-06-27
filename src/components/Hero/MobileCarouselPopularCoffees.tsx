@@ -105,13 +105,11 @@ function MobileCarouselPopularCoffees() {
 			<motion.div
 				ref={carouselRef}
 				whileTap={{ cursor: "grabbing" }}
-				className="overflow-hidden cursor-grab"
-			>
+				className="overflow-hidden cursor-grab">
 				<motion.div
 					drag="x"
 					dragConstraints={{ right: 0, left: -width }}
-					className="flex space-x-4"
-				>
+					className="flex space-x-4">
 					{coffees.map((item) => (
 						<motion.div key={item.id} className="min-w-[200px]">
 							<CoffeeCard
@@ -120,8 +118,7 @@ function MobileCarouselPopularCoffees() {
 								intensity={item.intensity}
 								allVotes={item.allVotes}
 								rate={item.rate}
-								image={item.image}
-							/>
+								image={item.image}/>
 						</motion.div>
 					))}
 				</motion.div>
