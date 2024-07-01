@@ -9,15 +9,17 @@ import DesktopPopularCoffees from "./DesktopPopularCoffees";
 function Hero() {
 
 	return (
-		<section className="flex flex-col gap-6 xl:gap-16 4xl:gap-0 bg-coffee-bg h-screen bg-cover bg-center">
-			<div className="flex pb-6 4xl:gap-56" >
+		<section className="flex flex-col sm:gap-5 xl:gap-16 4xl:gap-0 bg-coffee-bg h-screen bg-cover bg-center">
+			<div className="flex 4xl:gap-56" >
 				<div className="flex flex-col text-white xl:gap-10 8xl:w-[60%]">
-					<h1 className="text-3xl pt-12 pb-6 px-12 text-amber-700 4xl:text-6xl 8xl:p-20">Enjoy your <span className="text-coffeeVariant1">coffee</span> before your activity</h1>
-					<p className="text-xl px-12 pb-6 text-zinc-400 4xl:text-3xl 8xl:text-4xl 8xl:px-20">Boost your productivity and build your mood with a glass of <span className="text-coffeeVariant1">coffee</span> in the morning!</p>
-					<nav className="flex justify-around">
+					<h1 className="text-3xl text-amber-700 xs:pt-6 xs:pb-3 xs:px-6 sm:pt-12 sm:pb-6 sm:px-12 4xl:text-6xl 8xl:p-20">Enjoy your <span className="text-coffeeVariant1">coffee</span> before your activity</h1>
+					<p className="text-lg text-zinc-400 xs:px-6 xs:pb-3 sm:px-12 sm:pb-6 4xl:text-3xl 8xl:text-4xl 8xl:px-20">Boost your productivity and build your mood with a glass of <span className="text-coffeeVariant1">coffee</span> in the morning!</p>
+					<nav className="flex justify-evenly">
 						<Button className="bg-coffeeVariant2 rounded-full items-center font-bold flex gap-2 px-4 py-2 hover:bg-yellow-900 transition-all delay-75 4xl:py-2 4xl:px-6"
 							text="Order Now"
-							icon={<Icon className="4xl:size-6" iconname="ShoppingCart" />} />
+							bgColor="bg-coffeeVariant1"
+							padding="p-2"
+							icon={<Icon className="xs:size-3 4xl:size-6" iconname="ShoppingCart" />} />
 						<Button className="hover:bg-coffeeVariant2 text-coffeeVariant1 rounded-full font-bold px-4 py-2 transition-all delay-75"
 							text="More Menu" />
 					</nav>
@@ -35,7 +37,7 @@ function Hero() {
 					<Image className="border-coffeeVariant3 absolute right-12 border-[20px] rounded-full" src='/cappuccino.png' alt="Cappuccino" width={350} height={350} />
 				</div>
 			</div>
-			<div>
+			<div className="m-2">
 				{window.innerWidth < 1280 ? (
 					<MobileCarouselPopularCoffees />
 				) : <DesktopPopularCoffees />}

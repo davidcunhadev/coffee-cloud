@@ -99,8 +99,8 @@ function MobileCarouselPopularCoffees() {
 	}, []);
 
 	return (
-		<div className="h-full bg-coffeeVariant1 bg-opacity-40 rounded-2xl p-4">
-			<h1 className="text-coffeeVariant3 font-bold text-xl text-center pb-4">Popular <span className="border-b-2 border-coffeeVariant3">Now</span>
+		<div className="h-full bg-coffeeVariant1 bg-opacity-40 rounded-2xl p-2">
+			<h1 className="text-coffeeVariant3 font-bold text-center pb-2 xs:text-xs sm:text-xl">Popular <span className="border-b-2 border-coffeeVariant3">Now</span>
 			</h1>
 			<motion.div
 				ref={carouselRef}
@@ -111,7 +111,7 @@ function MobileCarouselPopularCoffees() {
 					dragConstraints={{ right: 0, left: -width }}
 					className="flex space-x-4">
 					{coffees.map((item) => (
-						<motion.div key={item.id} className="min-w-[200px]">
+						<motion.div key={item.id} className="xs:min-w-[130px] sm:min-w-[200px]">
 							<CoffeeCard
 								name={item.name}
 								method={item.method}
